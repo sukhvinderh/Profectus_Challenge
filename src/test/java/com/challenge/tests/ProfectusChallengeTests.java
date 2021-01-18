@@ -18,7 +18,8 @@ public class ProfectusChallengeTests extends BaseTest {
   @Test
   public void verifyMessageIsSentToPerson() {
 	  login = new LinkedInLoginPage(driver);
-	  homepage = login.login("sukhvinder.hanspal@gmail.com", "Coolio88$$");
+	  // Enter LinkedIn Credentials
+	  homepage = login.login("", "");
 	  search = homepage.searchPerson("Profectus Kamaljeet");
 	  
 	  person = search.getPerson(p->p.getPersonName().equals("Kamaljeet Singh"));
